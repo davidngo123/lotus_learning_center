@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Educational resources, tips, and stories for Vietnamese immigrants in Seattle. Learn about ESL, citizenship, career development, and community integration.">
+    <meta name="keywords" content="ESL tips, Vietnamese immigrants, Seattle education, citizenship guide, career advice, immigrant resources, learning English">
+    <title>Blog & Resources | Lotus Learning Center</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="pages.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <span class="logo-icon me-2">🪷</span>
+                <span class="logo-text">Lotus Learning Center</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tutoring.html">Tutoring</a></li>
+                    <li class="nav-item"><a class="nav-link" href="volunteer.html">Volunteer</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+                    <li class="nav-item"><a class="btn btn-primary ms-lg-3" href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header bg-gradient-primary text-white">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8">
+                    <h1 class="display-4 fw-bold mb-3">Blog & Resources</h1>
+                    <p class="lead">Educational tips, community stories, and helpful guides for your learning journey</p>
+                    <p class="lead"><em>Tài nguyên giáo dục và câu chuyện cộng đồng</em></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Post -->
+    <section class="py-5">
+        <div class="container">
+            <div class="card border-0 shadow-lg overflow-hidden">
+                <div class="row g-0">
+                    <div class="col-lg-6">
+                        <div class="featured-image-placeholder bg-gradient-primary text-white d-flex align-items-center justify-content-center" style="min-height: 400px;">
+                            <div class="text-center p-4">
+                                <i class="bi bi-mortarboard" style="font-size: 5rem;"></i>
+                                <h3 class="mt-3">Featured Article</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="card-body p-5">
+                            <div class="mb-3">
+                                <span class="badge bg-primary">Featured</span>
+                                <span class="badge bg-success">ESL Tips</span>
+                            </div>
+                            <h2 class="fw-bold mb-3">10 Effective Ways to Practice English at Home</h2>
+                            <p class="text-muted mb-3">
+                                <i class="bi bi-calendar3 me-2"></i>November 20, 2025
+                                <span class="mx-2">•</span>
+                                <i class="bi bi-clock me-2"></i>8 min read
+                            </p>
+                            <p class="lead mb-4">Learning English doesn't stop when you leave the classroom. Discover practical strategies to improve your English skills in everyday situations, from watching TV shows to talking with your family.</p>
+                            <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#blogModal1">Read Full Article</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Category Filter -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="d-flex flex-wrap gap-2 justify-content-center mb-4">
+                <button class="btn btn-outline-primary active" onclick="filterPosts('all')">All Posts</button>
+                <button class="btn btn-outline-primary" onclick="filterPosts('esl')">ESL Tips</button>
+                <button class="btn btn-outline-primary" onclick="filterPosts('citizenship')">Citizenship</button>
+                <button class="btn btn-outline-primary" onclick="filterPosts('career')">Career</button>
+                <button class="btn btn-outline-primary" onclick="filterPosts('community')">Community</button>
+                <button class="btn btn-outline-primary" onclick="filterPosts('success')">Success Stories</button>
+            </div>
+
+            <!-- Blog Grid -->
+            <div class="row g-4" id="blogGrid">
+                <!-- Blog Post 1 -->
+                <div class="col-lg-4 col-md-6 blog-post" data-category="citizenship">
+                    <div class="card border-0 shadow-sm h-100 hover-lift">
+                        <div class="card-img-placeholder bg-success bg-opacity-10 text-success d-flex align-items-center justify-content-center" style="height: 200px;">
+                            <i class="bi bi-flag" style="font-size: 3rem;"></i>
+                        </div>
+                        <div class="card-body">
+                            <div class="mb-2">
+                                <span class="badge bg-success">Citizenship</span>
+                            </div>
+                            <h3 class="h5 fw-bold mb-2">Complete Guide to U.S. Citizenship Test</h3>
+                            <p class="text-muted small mb-3">
+                                <i class="bi bi-calendar3 me-1"></i>November 18, 2025
+                            </p>
+                            <p class="card-text">Everything you need to know about preparing for the citizenship test, including study tips and common questions.</p>
+                            <a href="#" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#blogModal2">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blog Post 2 -->
+                <div class="col-lg-4 col-md-6 blog-post" data-category="career">
+                    <div class="card border-0 shadow-sm h-100 hover-lift">
+                        <div class="card-img-placeholder bg-warning bg-opacity-10 text-warning d-flex align-items-center justify-content-center" style="height: 200px;">
+                            <i class="bi bi-briefcase" style="font-size: 3rem;"></i>
+                        </div>
+                        <div class="card-body">
+                            <div class="mb-2">
+                                <span class="badge bg-warning text-dark">Career</span>
+                            </div>
+                            <h3 class="h5 fw-bold mb-2">How to Write a Resume That Gets Noticed</h3>
+                            <p class="text-muted small mb-3">
+                                <i class="bi bi-calendar3 me-1"></i>November 15, 2025
+                            </p>
+                            <p class="card-text">Learn how to create a professional resume that highlights your skills and experience for the American job market.</p>
+                            <a href="#" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#blogModal3">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blog Post 3 -->
+                <div class="col-lg-4 col-md-6 blog-post" data-category="esl">
+                    <div class="card border-0 shadow-sm h-100 hover-lift">
+                        <div class="card-img-placeholder bg-primary bg-opacity-10 text-primary d-flex align-items-center justify-content-center" style="height: 200px;">
+                            <i class="bi bi-chat-dots" style="font-size: 3rem;"></i>
+                        </div>
+                        <div class="card-body">
+                            <div class="mb-2">
+                                <span class="badge bg-primary">ESL Tips</span>
+                            </div>
+                            <h3 class="h5 fw-bold mb-2">Common English Pronunciation Mistakes for Vietnamese Speakers</h3>
+                            <p class="text-muted small mb-3">
+                                <i class="bi bi-calendar3 me-1"></i>November 12, 2025
+                            </p>
+                            <p class="card-text">Identify and overcome pronunciation challenges specific to Vietnamese speakers learning English.</p>
+                            <a href="#" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#blogModal4">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blog Post 4 -->
+                <div class="col-lg-4 col-md-6 blog-post" data-category="success">
+                    <div class="card border-0 shadow-sm h-100 hover-lift">
+                        <div class="card-img-placeholder bg-info bg-opacity-10 text-info d-flex align-items-center justify-content-center" style="height: 200px;">
+                            <i class="bi bi-trophy" style="font-size: 3rem;"></i>
+                        </div>
+                        <div class="card-body">
+                            <div class="mb-2">
+                                <span class="badge bg-info">Success Stories</span>
+                            </div>
+                            <h3 class="h5 fw-bold mb-2">From New Immigrant to Business Owner: Lan's Story</h3>
+                            <p class="text-muted small mb-3">
+                                <i class="bi bi-calendar3 me-1"></i>November 10, 2025
+                            </p>
+                            <p class="card-text">How one student used English classes and career mentoring to launch her own catering business in Seattle.</p>
+                            <a href="#" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#blogModal5">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blog Post 5 -->
+                <div class="col-lg-4 col-md-6 blog-post" data-category="community">
+                    <div class="card border-0 shadow-sm h-100 hover-lift">
+                        <div class="card-img-placeholder bg-danger bg-opacity-10 text-danger d-flex align-items-center justify-content-center" style="height: 200px;">
+                            <i class="bi bi-people" style="font-size: 3rem;"></i>
+                        </div>
+                        <div class="card-body">
+                            <div class="mb-2">
+                                <span class="badge bg-danger">Community</span>
+                            </div>
+                            <h3 class="h5 fw-bold mb-2">Seattle Resources for Vietnamese Families</h3>
+                            <p class="text-muted small mb-3">
+                                <i class="bi bi-calendar3 me-1"></i>November 8, 2025
+                            </p>
+                            <p class="card-text">A comprehensive guide to free and low-cost resources available to Vietnamese immigrant families in the Seattle area.</p>
+                            <a href="#" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#blogModal6">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blog Post 6 -->
+                <div class="col-lg-4 col-md-6 blog-post" data-category="esl">
+                    <div class="card border-0 shadow-sm h-100 hover-lift">
+                        <div class="card-img-placeholder bg-primary bg-opacity-10 text-primary d-flex align-items-center justify-content-center" style="height: 200px;">
+                            <i class="bi bi-book" style="font-size: 3rem;"></i>
+                        </div>
+                        <div class="card-body">
+                            <div class="mb-2">
+                                <span class="badge bg-primary">ESL Tips</span>
+                            </div>
+                            <h3 class="h5 fw-bold mb-2">Building Vocabulary: 50 Essential English Words for Daily Life</h3>
+                            <p class="text-muted small mb-3">
+                                <i class="bi bi-calendar3 me-1"></i>November 5, 2025
+                            </p>
+                            <p class="card-text">Master the most important English words and phrases you'll use in everyday situations in America.</p>
+                            <a href="#" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#blogModal7">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blog Post 7 -->
+                <div class="col-lg-4 col-md-6 blog-post" data-category="career">
+                    <div class="card border-0 shadow-sm h-100 hover-lift">
+                        <div class="card-img-placeholder bg-warning bg-opacity-10 text-warning d-flex align-items-center justify-content-center" style="height: 200px;">
+                            <i class="bi bi-person-workspace" style="font-size: 3rem;"></i>
+                        </div>
+                        <div class="card-body">
+                            <div class="mb-2">
+                                <span class="badge bg-warning text-dark">Career</span>
+                            </div>
+                            <h3 class="h5 fw-bold mb-2">Interview Tips: Cultural Differences to Know</h3>
+                            <p class="text-muted small mb-3">
+                                <i class="bi bi-calendar3 me-1"></i>November 3, 2025
+                            </p>
+                            <p class="card-text">Understanding American workplace culture and what employers expect during job interviews.</p>
+                            <a href="#" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#blogModal8">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blog Post 8 -->
+                <div class="col-lg-4 col-md-6 blog-post" data-category="citizenship">
+                    <div class="card border-0 shadow-sm h-100 hover-lift">
+                        <div class="card-img-placeholder bg-success bg-opacity-10 text-success d-flex align-items-center justify-content-center" style="height: 200px;">
+                            <i class="bi bi-file-text" style="font-size: 3rem;"></i>
+                        </div>
+                        <div class="card-body">
+                            <div class="mb-2">
+                                <span class="badge bg-success">Citizenship</span>
+                            </div>
+                            <h3 class="h5 fw-bold mb-2">Understanding the N-400 Application Process</h3>
+                            <p class="text-muted small mb-3">
+                                <i class="bi bi-calendar3 me-1"></i>November 1, 2025
+                            </p>
+                            <p class="card-text">Step-by-step guide to completing your citizenship application and what to expect during the process.</p>
+                            <a href="#" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#blogModal9">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blog Post 9 -->
+                <div class="col-lg-4 col-md-6 blog-post" data-category="community">
+                    <div class="card border-0 shadow-sm h-100 hover-lift">
+                        <div class="card-img-placeholder bg-danger bg-opacity-10 text-danger d-flex align-items-center justify-content-center" style="height: 200px;">
+                            <i class="bi bi-calendar-heart" style="font-size: 3rem;"></i>
+                        </div>
+                        <div class="card-body">
+                            <div class="mb-2">
+                                <span class="badge bg-danger">Community</span>
+                            </div>
+                            <h3 class="h5 fw-bold mb-2">Celebrating Tết: Keeping Vietnamese Culture Alive in Seattle</h3>
+                            <p class="text-muted small mb-3">
+                                <i class="bi bi-calendar3 me-1"></i>October 28, 2025
+                            </p>
+                            <p class="card-text">How our community celebrates Lunar New Year and maintains cultural traditions while adapting to life in America.</p>
+                            <a href="#" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#blogModal10">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <nav aria-label="Blog pagination" class="mt-5">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1">Previous</a>
+                    </li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">Next</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section class="py-5">
+        <div class="container">
+            <div class="card border-0 shadow-lg bg-gradient-primary text-white">
+                <div class="card-body p-5 text-center">
+                    <h2 class="display-6 fw-bold mb-3">Stay Updated</h2>
+                    <p class="lead mb-4">Subscribe to our newsletter for the latest articles, resources, and community news.</p>
+                    <div class="row justify-content-center">
+                        <div class="col-lg-6">
+                            <form id="blogNewsletterForm" class="d-flex gap-2">
+                                <input type="email" class="form-control form-control-lg" placeholder="Your email address" required>
+                                <button type="submit" class="btn btn-light btn-lg px-4">Subscribe</button>
+                            </form>
+                            <p class="small mt-3 mb-0 opacity-75">We respect your privacy. Unsubscribe anytime.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Modals - Sample for Featured Article -->
+    <div class="modal fade" id="blogModal1" tabindex="-1" aria-labelledby="blogModal1Label" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold" id="blogModal1Label">10 Effective Ways to Practice English at Home</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <div class="mb-4">
+                        <span class="badge bg-primary me-2">ESL Tips</span>
+                        <span class="text-muted">
+                            <i class="bi bi-calendar3 me-1"></i>November 20, 2025
+                            <span class="mx-2">•</span>
+                            <i class="bi bi-clock me-1"></i>8 min read
+                        </span>
+                    </div>
+                    
+                    <p class="lead">Learning English doesn't stop when you leave the classroom. Here are ten practical strategies to improve your English skills in everyday situations.</p>
+
+                    <h3 class="h4 fw-bold mt-4 mb-3">1. Watch TV Shows and Movies with Subtitles</h3>
+                    <p>Start with Vietnamese subtitles, then switch to English subtitles, and eventually try watching without any subtitles. This helps you learn natural conversation patterns and common expressions.</p>
+
+                    <h3 class="h4 fw-bold mt-4 mb-3">2. Change Your Phone Language to English</h3>
+                    <p>This simple change forces you to read English every day and helps you learn technology-related vocabulary naturally.</p>
+
+                    <h3 class="h4 fw-bold mt-4 mb-3">3. Practice Speaking with Family Members</h3>
+                    <p>Set aside 15 minutes each day to practice English conversation with your family. Don't worry about making mistakes—the goal is to build confidence.</p>
+
+                    <h3 class="h4 fw-bold mt-4 mb-3">4. Listen to English Podcasts or Music</h3>
+                    <p>Find podcasts designed for English learners or listen to English songs. Try to understand the lyrics and write them down.</p>
+
+                    <h3 class="h4 fw-bold mt-4 mb-3">5. Keep a Daily English Journal</h3>
+                    <p>Write a few sentences in English each day about your activities, thoughts, or feelings. This improves your writing skills and helps you think in English.</p>
+
+                    <h3 class="h4 fw-bold mt-4 mb-3">6. Use Language Learning Apps</h3>
+                    <p>Apps like Duolingo, Babbel, or HelloTalk provide structured lessons and opportunities to practice with other learners.</p>
+
+                    <h3 class="h4 fw-bold mt-4 mb-3">7. Read English Books or News Articles</h3>
+                    <p>Start with children's books or simple news articles. Gradually increase difficulty as your skills improve.</p>
+
+                    <h3 class="h4 fw-bold mt-4 mb-3">8. Label Items Around Your House</h3>
+                    <p>Put English labels on furniture, appliances, and common items. This helps you build vocabulary for everyday objects.</p>
+
+                    <h3 class="h4 fw-bold mt-4 mb-3">9. Practice with Store Employees</h3>
+                    <p>When shopping, try to have brief conversations in English. Ask questions about products or practice polite phrases.</p>
+
+                    <h3 class="h4 fw-bold mt-4 mb-3">10. Join Online Language Exchange Groups</h3>
+                    <p>Connect with native English speakers who want to learn Vietnamese. You can help each other learn through conversation practice.</p>
+
+                    <div class="alert alert-info mt-4">
+                        <h5 class="fw-bold"><i class="bi bi-lightbulb me-2"></i>Pro Tip</h5>
+                        <p class="mb-0">Consistency is more important than intensity. Practicing 15 minutes every day is better than studying for 2 hours once a week.</p>
+                    </div>
+
+                    <div class="border-top pt-4 mt-4">
+                        <p class="fw-bold">Need more personalized help? <a href="tutoring.html">Learn about our individual tutoring services</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add more blog modals as needed (blogModal2 through blogModal10) -->
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <span class="logo-icon me-2">🪷</span>
+                        <span class="logo-text fs-5 fw-bold">Lotus Learning Center</span>
+                    </div>
+                    <p class="text-white-50">Empowering Vietnamese immigrants through education and community support in Seattle.</p>
+                    <p class="text-white-50"><em>Trao quyền cho người nhập cư Việt Nam thông qua giáo dục.</em></p>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="fw-bold mb-3">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-white-50 text-decoration-none">Home</a></li>
+                        <li class="mb-2"><a href="about.html" class="text-white-50 text-decoration-none">About</a></li>
+                        <li class="mb-2"><a href="tutoring.html" class="text-white-50 text-decoration-none">Tutoring</a></li>
+                        <li class="mb-2"><a href="volunteer.html" class="text-white-50 text-decoration-none">Volunteer</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="fw-bold mb-3">Programs</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html#programs" class="text-white-50 text-decoration-none">English Classes</a></li>
+                        <li class="mb-2"><a href="index.html#programs" class="text-white-50 text-decoration-none">Citizenship Prep</a></li>
+                        <li class="mb-2"><a href="tutoring.html" class="text-white-50 text-decoration-none">Individual Tutoring</a></li>
+                        <li class="mb-2"><a href="blog.html" class="text-white-50 text-decoration-none">Blog & Resources</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="fw-bold mb-3">Contact</h5>
+                    <ul class="list-unstyled text-white-50">
+                        <li class="mb-2"><i class="bi bi-geo-alt me-2"></i>Seattle, WA</li>
+                        <li class="mb-2"><i class="bi bi-envelope me-2"></i>info@lotuslearningcenter.org</li>
+                        <li class="mb-2"><i class="bi bi-phone me-2"></i>(206) 555-1234</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4 bg-white opacity-10">
+            <div class="text-center text-white-50">
+                <p class="mb-0">&copy; 2025 Lotus Learning Center. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // Blog filter functionality
+        function filterPosts(category) {
+            const posts = document.querySelectorAll('.blog-post');
+            const buttons = document.querySelectorAll('.btn-outline-primary');
+            
+            // Update active button
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            // Filter posts
+            posts.forEach(post => {
+                if (category === 'all' || post.dataset.category === category) {
+                    post.style.display = 'block';
+                    // Fade in animation
+                    post.style.animation = 'fadeIn 0.5s';
+                } else {
+                    post.style.display = 'none';
+                }
+            });
+        }
+
+        // Newsletter form submission
+        document.getElementById('blogNewsletterForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for subscribing! You will receive our latest articles and resources.\n\nCảm ơn bạn đã đăng ký!');
+            this.reset();
+        });
+
+        // Add fadeIn animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fadeIn {
+                from { opacity: 0; transform: translateY(20px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
